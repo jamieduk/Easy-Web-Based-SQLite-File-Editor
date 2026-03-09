@@ -13,6 +13,11 @@ sudo chmod +x *.sh
 
 ./start.sh "file.db"
 
+Now visit
+
+brave-browser http://localhost:83856
+
+
 
 # Example sql queries
 
