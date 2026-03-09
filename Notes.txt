@@ -1,0 +1,62 @@
+
+SQLite File Editor
+
+
+
+sudo chmod +x *.sh
+
+
+./setup.sh
+
+
+./start.sh "file.db"
+
+
+# Example sql queries
+
+
+SELECT * FROM tracks WHERE path LIKE '%.mp3';
+
+Explanation:
+
+% = wildcard (any characters)
+
+'%.mp3' = anything that ends with .mp3
+
+If you want it case-insensitive (useful if some files are .MP3):
+
+SELECT * FROM tracks WHERE LOWER(path) LIKE '%.mp3';
+
+If you only want rows where .mp3 appears anywhere in the path:
+
+SELECT * FROM tracks WHERE path LIKE '%.mp3%';
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Manual Setup
+
+python3.12 -m venv venv
+PYTHON_PATH=$(which python3.12)
+echo "alias python='$PYTHON_PATH'" >> venv/bin/activate
+source venv/bin/activate
+echo "Virtual Environment setup and ready!"
+echo ""
+
+
+pip install sqlite-web
+
+sqlite_web mydatabase.db --host 0.0.0.0 --port 8381
+
+brave-browser http://localhost:8381
+
+
+
+
+
+
+
+
+
+
+
