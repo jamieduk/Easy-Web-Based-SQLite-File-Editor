@@ -1,6 +1,8 @@
 
 SQLite File Editor
 
+https://github.com/jamieduk/Easy-Web-Based-SQLite-File-Editor
+
 
 
 sudo chmod +x *.sh
