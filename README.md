@@ -22,6 +22,12 @@ Run setup:
 Start the editor with a database:
 
 ./start.sh "file.db"
+
+Now visit
+
+brave-browser http://localhost:83856
+
+
 Example SQL Queries
 
 Select all MP3 files:
